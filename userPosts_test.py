@@ -9,6 +9,7 @@ def test_posts():
     resp_body = resp.json()
     for i in range(len(resp_body)):
         assert resp_body[i]["userId"] == rand_int
-        assert resp_body[i]["id"] != None
+        assert type(resp_body[i]["id"]) == int
         assert resp_body[i]["title"] != None
         assert resp_body[i]["body"] != None
+        
