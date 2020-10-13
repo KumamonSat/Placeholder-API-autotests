@@ -8,3 +8,7 @@ def test_posts():
     assert resp.status_code == 200
     resp_body = resp.json()
     assert resp_body["id"] == rand_int
+    assert type(resp_body["id"]) == int
+    assert resp_body["title"] != None
+    assert resp_body["body"] != None
+    
